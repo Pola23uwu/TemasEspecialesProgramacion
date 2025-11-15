@@ -19,17 +19,15 @@ class UserRepository {
     return users;
   }
 
-  // Nuevo método: Obtener usuarios mayores de 17 años
+
   getAdultUsers(): User[] {
     const users = this.db.getAllUsers();
-    // Filtramos donde la edad sea estrictamente mayor a 17.
     return users.filter(user => user.age > 17);
   }
 
-  // Nuevo método: Obtener usuarios menores de 18 años
+  
   getMinorUsers(): User[] {
     const users = this.db.getAllUsers();
-    // Filtramos donde la edad sea estrictamente menor a 18.
     return users.filter(user => user.age < 18);
   }
 }

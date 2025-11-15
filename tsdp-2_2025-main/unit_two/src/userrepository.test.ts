@@ -96,7 +96,6 @@ describe('User respository', () => {
   it('should return users younger than 18 (Minors)', () => {
     const mockDB = new DB();
 
-    // Simulamos que getAllUsers devuelve nuestro array de prueba
     const getAllUsersSpy = jest.spyOn(mockDB, 'getAllUsers').mockImplementation(() => {
       return mockUsers;
     });
